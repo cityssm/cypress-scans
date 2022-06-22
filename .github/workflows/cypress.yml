@@ -13,6 +13,6 @@ jobs:
           node-version: '16'
       - run: npm install -g cypress@10
       - run: npm ci
-      - run: npm run cy:run
+      - run: npm run cy:run:record
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}

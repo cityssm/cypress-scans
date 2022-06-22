@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "cypress open --config-file cypress.config.ts",
-    "cy:run": "cypress run --config-file cypress.config.ts --browser chrome"
+    "cy:run": "cypress run --config-file cypress.config.ts --browser chrome",
+    "cy:run:record": "cypress run --config-file cypress.config.ts --browser chrome --record"
   },
   "repository": {
     "type": "git",
