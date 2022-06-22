@@ -38,7 +38,7 @@ describe("SaultSteMarie.ca", async() => {
   it("Passes axe tests", () => {
 
     for (const testURL of randomURLs) {
-      console.log("Testing " + testURL + " ...");
+      cy.log("Testing " + testURL + " ...");
       cy.visit(testURL);
       cy.injectAxe();
       cy.checkA11y();
