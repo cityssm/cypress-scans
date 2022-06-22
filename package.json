@@ -1,0 +1,38 @@
+{
+  "name": "cypress-scans",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open --config-file cypress.config.ts",
+    "cy:run": "cypress run --config-file cypress.config.ts --browser chrome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cityssm/cypress-scans.git"
+  },
+  "author": "The Corporation of the City of Sault Ste. Marie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cityssm/cypress-scans/issues"
+  },
+  "homepage": "https://github.com/cityssm/cypress-scans#readme",
+  "dependencies": {
+    "@cityssm/get-site-urls": "^3.5.0",
+    "cypress": "^10.2.0",
+    "cypress-axe": "^1.0.0"
+  },
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint": "^8.18.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-unicorn": "^42.0.0"
+  }
+}
