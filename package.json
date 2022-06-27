@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build:saultstemarie.ca": "cross-env DEBUG=get-site-urls node buildSitemapFixtures.js --website saultstemarie.ca",
     "cy:open": "cypress open --config-file cypress.config.ts",
     "cy:run": "cypress run --config-file cypress.config.ts --browser chrome",
     "cy:run:record": "cypress run --config-file cypress.config.ts --browser chrome --record"
@@ -21,8 +22,12 @@
   "homepage": "https://github.com/cityssm/cypress-scans#readme",
   "dependencies": {
     "@cityssm/get-site-urls": "^3.5.0",
+    "@types/minimist": "^1.2.2",
+    "cross-env": "^7.0.3",
     "cypress": "^10.2.0",
-    "cypress-axe": "^1.0.0"
+    "cypress-axe": "^1.0.0",
+    "cypress-each": "^1.11.0",
+    "minimist": "^1.2.6"
   },
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
