@@ -8,7 +8,7 @@ import { urls } from "../fixtures/saultstemarie.ca.json";
 
 describe("SaultSteMarie.ca", async () => {
 
-  const testURLs = shuffleArray(urls).slice(100);
+  const testURLs = shuffleArray(urls).slice(0, 100);
 
   it.each(testURLs)("Passes axe tests - %s", (testURL) => {
     cy.visit(testURL);
