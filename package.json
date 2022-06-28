@@ -29,6 +29,8 @@
     "cypress": "^10.2.0",
     "cypress-axe": "^1.0.0",
     "cypress-each": "^1.11.0",
+    "cypress-html-validate": "^5.0.2",
+    "html-validate": "^7.1.1",
     "minimist": "^1.2.6"
   },
   "engines": {
