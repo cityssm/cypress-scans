@@ -1,6 +1,6 @@
 import { shuffleArray, PAGE_COUNT } from "../../utils.js";
-import { urls } from "../fixtures/gflgardens.ca.json";
-describe("GFLGardens.ca", async () => {
+import { urls } from "../fixtures/saulttourism.com.json";
+describe("SaultTourism.com", async () => {
     const testURLs = shuffleArray(urls).slice(0, PAGE_COUNT);
     it.each(testURLs)("Has valid HTML - %s", (testURL) => {
         cy.visit(testURL);

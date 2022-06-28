@@ -1,3 +1,6 @@
+export const PAGE_COUNT = 25;
+
+
 export const shuffleArray = (array: string[]) => {
 
   for (let index = array.length - 1; index > 0; index--) {

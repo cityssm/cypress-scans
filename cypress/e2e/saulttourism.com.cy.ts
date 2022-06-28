@@ -1,15 +1,19 @@
 import { shuffleArray, PAGE_COUNT } from "../../utils.js";
 
-import { urls } from "../fixtures/welcometossm.com.json";
+import { urls } from "../fixtures/saulttourism.com.json";
 
 
-describe("WelcomeToSSM.com", async () => {
+describe("SaultTourism.com", async () => {
 
   const testURLs = shuffleArray(urls).slice(0, PAGE_COUNT);
 
   it.each(testURLs)("Has valid HTML - %s", (testURL) => {
     cy.visit(testURL);
-    cy.htmlvalidate();
+    cy.htmlvalidate({
+      rules: {
+        "valid-id": "off"
+      }
+    });
   });
 
   it.each(testURLs)("Passes axe tests - %s", (testURL) => {

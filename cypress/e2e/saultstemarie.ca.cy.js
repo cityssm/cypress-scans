@@ -1,7 +1,7 @@
-import { shuffleArray } from "../../utils.js";
+import { shuffleArray, PAGE_COUNT } from "../../utils.js";
 import { urls } from "../fixtures/saultstemarie.ca.json";
 describe("SaultSteMarie.ca", async () => {
-    const testURLs = shuffleArray(urls).slice(0, 50);
+    const testURLs = shuffleArray(urls).slice(0, PAGE_COUNT);
     it.each(testURLs)("Has valid HTML - %s", (testURL) => {
         cy.visit(testURL);
         cy.htmlvalidate({

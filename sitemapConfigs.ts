@@ -36,6 +36,15 @@ const saultstemarieCa: SitemapConfig = {
   toExclude: []
 };
 
+// SaultTourism.com
+const saulttourismCom: SitemapConfig = {
+  toInclude: [],
+  toSearch: [
+    "https://www.saulttourism.com/"
+  ],
+  toExclude: []
+};
+
 // WelcomeToSSM.com
 const welcometossmCom: SitemapConfig = {
   toInclude: [
@@ -51,6 +60,7 @@ const welcometossmCom: SitemapConfig = {
 export const sitemapConfigs: { [website: string]: SitemapConfig } = {
   "gflgardens.ca": gflgardensCa,
   "saultstemarie.ca": saultstemarieCa,
+  "saulttourism.com": saulttourismCom,
   "welcometossm.com": welcometossmCom
 };
 

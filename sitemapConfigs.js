@@ -23,6 +23,13 @@ const saultstemarieCa = {
     ],
     toExclude: []
 };
+const saulttourismCom = {
+    toInclude: [],
+    toSearch: [
+        "https://www.saulttourism.com/"
+    ],
+    toExclude: []
+};
 const welcometossmCom = {
     toInclude: [
         "https://welcometossm.com/?s=transportation"
@@ -35,6 +42,7 @@ const welcometossmCom = {
 export const sitemapConfigs = {
     "gflgardens.ca": gflgardensCa,
     "saultstemarie.ca": saultstemarieCa,
+    "saulttourism.com": saulttourismCom,
     "welcometossm.com": welcometossmCom
 };
 export default sitemapConfigs;
