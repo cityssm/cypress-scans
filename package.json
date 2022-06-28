@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm-run-all -c build:*",
     "build:gflgardens.ca": "cross-env DEBUG=get-site-urls node buildSitemapFixtures.js --website gflgardens.ca",
     "build:saultstemarie.ca": "cross-env DEBUG=get-site-urls node buildSitemapFixtures.js --website saultstemarie.ca",
     "build:saulttourism.com": "cross-env DEBUG=get-site-urls node buildSitemapFixtures.js --website saulttourism.com",
@@ -32,7 +33,8 @@
     "cypress-each": "^1.11.0",
     "cypress-html-validate": "^5.0.2",
     "html-validate": "^7.1.1",
-    "minimist": "^1.2.6"
+    "minimist": "^1.2.6",
+    "npm-run-all": "^4.1.5"
   },
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
