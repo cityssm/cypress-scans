@@ -4,6 +4,17 @@ interface SitemapConfig {
   toSearch: string[];
 }
 
+// ArtsAndCultureSSM.ca
+const artsandculturessmCa: SitemapConfig = {
+  toInclude: [
+    "https://artsandculturessm.ca"
+  ],
+  toSearch: [
+    "https://artsandculturessm.ca/sitemap/"
+  ],
+  toExclude: []
+};
+
 // GFLGardens.ca
 const gflgardensCa: SitemapConfig = {
   toInclude: [
@@ -58,6 +69,7 @@ const welcometossmCom: SitemapConfig = {
 
 
 export const sitemapConfigs: { [website: string]: SitemapConfig } = {
+  "artsandculturessm.ca": artsandculturessmCa,
   "gflgardens.ca": gflgardensCa,
   "saultstemarie.ca": saultstemarieCa,
   "saulttourism.com": saulttourismCom,

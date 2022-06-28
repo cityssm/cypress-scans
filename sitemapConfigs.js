@@ -1,3 +1,12 @@
+const artsandculturessmCa = {
+    toInclude: [
+        "https://artsandculturessm.ca"
+    ],
+    toSearch: [
+        "https://artsandculturessm.ca/sitemap/"
+    ],
+    toExclude: []
+};
 const gflgardensCa = {
     toInclude: [
         "http://gflgardens.ca",
@@ -40,6 +49,7 @@ const welcometossmCom = {
     toExclude: []
 };
 export const sitemapConfigs = {
+    "artsandculturessm.ca": artsandculturessmCa,
     "gflgardens.ca": gflgardensCa,
     "saultstemarie.ca": saultstemarieCa,
     "saulttourism.com": saulttourismCom,
