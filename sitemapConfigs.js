@@ -85,6 +85,19 @@ const saulttourismCom = {
     ],
     toExclude: []
 };
+const shapethesaultCa = {
+    toInclude: [
+        "https://shapethesault.ca/",
+        "https://shapethesault.ca/focus-areas",
+        "https://shapethesault.ca/events-%26-news",
+        "https://shapethesault.ca/faq",
+        "https://shapethesault.ca/openhouse",
+    ],
+    toSearch: [
+        "https://shapethesault.ca/home"
+    ],
+    toExclude: []
+};
 const welcometossmCom = {
     toInclude: [
         "https://welcometossm.com/?s=transportation"
@@ -103,6 +116,7 @@ export const sitemapConfigs = {
     "saultstemarie.ca": saultstemarieCa,
     "saulttogether.ca": saulttogetherCa,
     "saulttourism.com": saulttourismCom,
+    "shapethesault.ca": shapethesaultCa,
     "welcometossm.com": welcometossmCom
 };
 export default sitemapConfigs;

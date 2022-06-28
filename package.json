@@ -14,6 +14,7 @@
     "build:saultstemarie.ca": "cross-env DEBUG=get-site-urls node buildSitemapFixtures.js --website saultstemarie.ca",
     "build:saulttogether.ca": "cross-env DEBUG=get-site-urls node buildSitemapFixtures.js --website saulttogether.ca",
     "build:saulttourism.com": "cross-env DEBUG=get-site-urls node buildSitemapFixtures.js --website saulttourism.com",
+    "build:shapethesault.ca": "cross-env DEBUG=get-site-urls node buildSitemapFixtures.js --website shapethesault.ca",
     "build:welcometossm.com": "cross-env DEBUG=get-site-urls node buildSitemapFixtures.js --website welcometossm.com",
     "cy:open": "cypress open --config-file cypress.config.ts",
     "cy:run": "cypress run --config-file cypress.config.ts --browser chrome",

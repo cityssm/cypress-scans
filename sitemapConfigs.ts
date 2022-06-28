@@ -110,6 +110,21 @@ const saulttourismCom: SitemapConfig = {
   toExclude: []
 };
 
+// ShapeTheSault.ca
+const shapethesaultCa: SitemapConfig = {
+  toInclude: [
+    "https://shapethesault.ca/",
+    "https://shapethesault.ca/focus-areas",
+    "https://shapethesault.ca/events-%26-news",
+    "https://shapethesault.ca/faq",
+    "https://shapethesault.ca/openhouse",
+  ],
+  toSearch: [
+    "https://shapethesault.ca/home"
+  ],
+  toExclude: []
+};
+
 // WelcomeToSSM.com
 const welcometossmCom: SitemapConfig = {
   toInclude: [
@@ -131,6 +146,7 @@ export const sitemapConfigs: { [website: string]: SitemapConfig } = {
   "saultstemarie.ca": saultstemarieCa,
   "saulttogether.ca": saulttogetherCa,
   "saulttourism.com": saulttourismCom,
+  "shapethesault.ca": shapethesaultCa,
   "welcometossm.com": welcometossmCom
 };
 
