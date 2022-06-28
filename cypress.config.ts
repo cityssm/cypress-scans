@@ -10,7 +10,13 @@ export default defineConfig({
     "projectId": "n7zw99",
     "defaultCommandTimeout": 10 * 60 * 1000,
     "setupNodeEvents": (on) => {
-      htmlvalidate.install(on);
+      htmlvalidate.install(on, {
+        rules: {
+          "script-type": "off",
+          "require-sri": "off",
+          "valid-id": "warn"
+        }
+      });
     }
   }
 });
