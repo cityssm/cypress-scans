@@ -27,6 +27,24 @@ const artsandculturessmCa: SitemapConfig = {
   toExclude: []
 };
 
+// CitySSM.GitHub.io
+const cityssmGithubIo: SitemapConfig = {
+  toInclude: [
+    "https://cityssm.github.io",
+    "https://cityssm.github.io/municipal-github-rankings/",
+    "https://cityssm.github.io/property-tax-rate-data/",
+    "https://cityssm.github.io/ward-finder/"
+  ],
+  toSearch: [
+    "https://cityssm.github.io/contract-expiration-tracker/",
+    "https://cityssm.github.io/corporate-records-manager/",
+    "https://cityssm.github.io/general-licence-manager/",
+    "https://cityssm.github.io/lottery-licence-manager/",
+    "https://cityssm.github.io/parking-ticket-system/"
+  ],
+  toExclude: []
+};
+
 // GFLGardens.ca
 const gflgardensCa: SitemapConfig = {
   toInclude: [
@@ -83,6 +101,7 @@ const welcometossmCom: SitemapConfig = {
 export const sitemapConfigs: { [website: string]: SitemapConfig } = {
   "apps.saultstemarie.ca": appsSaultstemarieCa,
   "artsandculturessm.ca": artsandculturessmCa,
+  "cityssm.github.io": cityssmGithubIo,
   "gflgardens.ca": gflgardensCa,
   "saultstemarie.ca": saultstemarieCa,
   "saulttourism.com": saulttourismCom,
