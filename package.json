@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm-run-all -c build:*",
+    "build:apps.saultstemarie.ca": "cross-env DEBUG=get-site-urls node buildSitemapFixtures.js --website apps.saultstemarie.ca",
     "build:artsandculturessm.ca": "cross-env DEBUG=get-site-urls node buildSitemapFixtures.js --website artsandculturessm.ca",
     "build:gflgardens.ca": "cross-env DEBUG=get-site-urls node buildSitemapFixtures.js --website gflgardens.ca",
     "build:saultstemarie.ca": "cross-env DEBUG=get-site-urls node buildSitemapFixtures.js --website saultstemarie.ca",

@@ -4,6 +4,18 @@ interface SitemapConfig {
   toSearch: string[];
 }
 
+// Apps.SaultSteMarie.ca
+const appsSaultstemarieCa: SitemapConfig = {
+  toInclude: [
+    "https://apps.saultstemarie.ca/cityapps/builderServices-blankChecklist.asp?c=115"
+  ],
+  toSearch: [
+    "https://apps.saultstemarie.ca/cityapps/",
+    "https://apps.saultstemarie.ca/cityapps/shop/products"
+  ],
+  toExclude: []
+};
+
 // ArtsAndCultureSSM.ca
 const artsandculturessmCa: SitemapConfig = {
   toInclude: [
@@ -69,6 +81,7 @@ const welcometossmCom: SitemapConfig = {
 
 
 export const sitemapConfigs: { [website: string]: SitemapConfig } = {
+  "apps.saultstemarie.ca": appsSaultstemarieCa,
   "artsandculturessm.ca": artsandculturessmCa,
   "gflgardens.ca": gflgardensCa,
   "saultstemarie.ca": saultstemarieCa,
