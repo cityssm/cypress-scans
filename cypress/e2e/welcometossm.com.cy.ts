@@ -1,7 +1,4 @@
-import "cypress-axe";
-import "cypress-each";
-
-import { shuffleArray } from "../support/index.js";
+import { shuffleArray } from "../../utils.js";
 
 import { urls } from "../fixtures/welcometossm.com.json";
 

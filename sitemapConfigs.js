@@ -1,3 +1,16 @@
+const gflgardensCa = {
+    toInclude: [
+        "http://gflgardens.ca",
+        "http://gflgardens.ca/webapps-gardens/eventCalendar_home/index.asp",
+        "http://gflgardens.ca/webapps-gardens/eventCalendar/index.asp",
+        "http://gflgardens.ca/webapps-gardens/seatingMap_hockey/index.asp",
+        "http://gflgardens.ca/webapps-gardens/seatingMap_concert/index.asp"
+    ],
+    toSearch: [
+        "http://gflgardens.ca"
+    ],
+    toExclude: []
+};
 const saultstemarieCa = {
     toInclude: ["https://saultstemarie.ca",
         "https://saultstemarie.ca/Search.aspx?searchtext=parks",
@@ -20,6 +33,7 @@ const welcometossmCom = {
     toExclude: []
 };
 export const sitemapConfigs = {
+    "gflgardens.ca": gflgardensCa,
     "saultstemarie.ca": saultstemarieCa,
     "welcometossm.com": welcometossmCom
 };

@@ -4,6 +4,20 @@ interface SitemapConfig {
   toSearch: string[];
 }
 
+// GFLGardens.ca
+const gflgardensCa: SitemapConfig = {
+  toInclude: [
+    "http://gflgardens.ca",
+    "http://gflgardens.ca/webapps-gardens/eventCalendar_home/index.asp",
+    "http://gflgardens.ca/webapps-gardens/eventCalendar/index.asp",
+    "http://gflgardens.ca/webapps-gardens/seatingMap_hockey/index.asp",
+    "http://gflgardens.ca/webapps-gardens/seatingMap_concert/index.asp"
+  ],
+  toSearch: [
+    "http://gflgardens.ca"
+  ],
+  toExclude: []
+};
 
 // SaultSteMarie.ca
 const saultstemarieCa: SitemapConfig = {
@@ -35,6 +49,7 @@ const welcometossmCom: SitemapConfig = {
 
 
 export const sitemapConfigs: { [website: string]: SitemapConfig } = {
+  "gflgardens.ca": gflgardensCa,
   "saultstemarie.ca": saultstemarieCa,
   "welcometossm.com": welcometossmCom
 };
