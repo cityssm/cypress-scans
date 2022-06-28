@@ -3,10 +3,10 @@ import "cypress-each";
 
 import { shuffleArray } from "../support/index.js";
 
-import { urls } from "../fixtures/saultstemarie.ca.json";
+import { urls } from "../fixtures/welcometossm.com.json";
 
 
-describe("SaultSteMarie.ca", async () => {
+describe("WelcomeToSSM.com", async () => {
 
   const testURLs = shuffleArray(urls).slice(0, 50);
 

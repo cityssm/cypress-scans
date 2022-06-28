@@ -2,11 +2,15 @@ import * as fs from "fs";
 import minimist from "minimist";
 import { getSiteUrls } from "@cityssm/get-site-urls";
 
+import { sitemapConfigs } from "./sitemapConfigs.js";
+
 
 const MAX_DEPTH = 2;
 
 
 const argv = minimist(process.argv.slice(2));
+
+// Get --website parameter
 
 const website = argv.website as string;
 
@@ -15,41 +19,20 @@ if (!website) {
   process.exitCode = 1;
 }
 
-let toInclude: string[] = [];
-let toSearch: string[] = [];
-let toExclude: string[] = [];
+// Get URLs
 
-switch (website) {
+const sitemapConfig = sitemapConfigs[website];
 
-  case "saultstemarie.ca":
-
-    toInclude = ["https://saultstemarie.ca",
-      "https://saultstemarie.ca/Search.aspx?searchtext=parks",
-      "https://saultstemarie.ca/webapps/meetingMinutes.asp?type=council",
-      "https://saultstemarie.ca/webapps/corporateCalendar.asp?e=true",
-      "https://saultstemarie.ca/webapps/parabusCalendar.asp",
-      "https://saultstemarie.ca/webapps/parksAndPlaygrounds.asp"];
-
-    toSearch = [
-      "https://saultstemarie.ca"
-    ];
-
-    toExclude = [
-      // Redirected page
-      "https://saultstemarie.ca/Visitors.aspx"
-    ];
-
-    break;
-}
-
-if (toInclude.length === 0 && toSearch.length === 0 && toExclude.length === 0) {
+if (!sitemapConfig) {
   console.log("No URLs to build fixture file.");
   process.exitCode = 1;
 }
 
-const allURLs = [...toInclude, ...toSearch];
+// Search URLs
 
-for (const url of toSearch) {
+const allURLs = [...sitemapConfig.toInclude, ...sitemapConfig.toSearch];
+
+for (const url of sitemapConfig.toSearch) {
   try {
     console.log("Searching URL: " + url);
     const siteURLs = await getSiteUrls(url, MAX_DEPTH);
@@ -60,16 +43,20 @@ for (const url of toSearch) {
   }
 }
 
+// Filter out exclusions
+
 const distinctURLs: string[] = [...(new Set(allURLs))];
 
 for (let index = 0; index < distinctURLs.length; index += 1) {
   const url = distinctURLs[index];
-  if (url.endsWith(".pdf") || toExclude.includes(url)) {
+  if (url.endsWith(".pdf") || sitemapConfig.toExclude.includes(url)) {
     console.warn("Removing URL: " + url);
     distinctURLs.splice(index, 1);
     index -= 1;
   }
 }
+
+// Write the JSON file
 
 distinctURLs.sort();
 
