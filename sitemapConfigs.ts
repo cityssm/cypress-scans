@@ -45,6 +45,15 @@ const cityssmGithubIo: SitemapConfig = {
   toExclude: []
 };
 
+// CWASSM.ca
+const cwassmCa: SitemapConfig = {
+  toInclude: [],
+  toSearch: [
+    "https://cwassm.ca/"
+  ],
+  toExclude: [""]
+};
+
 // GFLGardens.ca
 const gflgardensCa: SitemapConfig = {
   toInclude: [
@@ -102,6 +111,7 @@ export const sitemapConfigs: { [website: string]: SitemapConfig } = {
   "apps.saultstemarie.ca": appsSaultstemarieCa,
   "artsandculturessm.ca": artsandculturessmCa,
   "cityssm.github.io": cityssmGithubIo,
+  "cwassm.ca": cwassmCa,
   "gflgardens.ca": gflgardensCa,
   "saultstemarie.ca": saultstemarieCa,
   "saulttourism.com": saulttourismCom,
