@@ -9,7 +9,11 @@ describe("GFLGardens.ca", async () => {
 
   it.each(testURLs)("Has valid HTML - %s", (testURL) => {
     cy.visit(testURL);
-    cy.htmlvalidate();
+    cy.htmlvalidate({
+      rules: {
+        "valid-id": "off"
+      }
+    });
   });
 
   it.each(testURLs)("Passes axe tests - %s", (testURL) => {

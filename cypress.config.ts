@@ -13,8 +13,7 @@ export default defineConfig({
       htmlvalidate.install(on, {
         rules: {
           "script-type": "off",
-          "require-sri": "off",
-          "valid-id": "warn"
+          "require-sri": "off"
         }
       });
     }
