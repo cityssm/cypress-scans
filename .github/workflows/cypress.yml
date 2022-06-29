@@ -4,15 +4,25 @@ on:
   schedule:
     - cron: '0 8 * * 1-5'
 jobs:
-  lighthouseci:
+  cypress:
     runs-on: ubuntu-18.04
+    strategy:
+      fail-fast: false
+      matrix:
+        # run copies of the current job in parallel
+        containers: [1, 2, 3, 4]
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - run: npm install -g cypress@10
-      - run: npm ci
-      - run: npm run cy:run:record
+      - name: Install Cypress
+        run: npm install -g cypress@10
+      - name: Install
+        run: npm ci
+      - name: Run Tests
+        run: npm run cy:run:record
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
