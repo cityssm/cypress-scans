@@ -22,6 +22,6 @@ Uses GitHub Actions and Cypress to regularly scans City of Sault Ste. Marie webs
 -   [@cypress-audit/pa11y](https://www.npmjs.com/package/@cypress-audit/pa11y)
 -   [cypress-axe](https://www.npmjs.com/package/cypress-axe)
 
-**Latest Scan Results**
+## Latest Scan Results
 
 [![cypress-scans](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/n7zw99/main&style=for-the-badge&logo=cypress)](https://dashboard.cypress.io/projects/n7zw99/runs)
