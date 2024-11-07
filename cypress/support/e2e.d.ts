@@ -1,5 +1,5 @@
-import "cypress-axe";
-import "cypress-each";
-import "cypress-html-validate/dist/commands.js";
-import "@cypress-audit/lighthouse/commands.js";
-import "@cypress-audit/pa11y/commands.js";
+import 'cypress-axe';
+import 'cypress-each';
+import 'cypress-html-validate/commands';
+import '@cypress-audit/lighthouse/commands.js';
+import '@cypress-audit/pa11y/commands.js';
