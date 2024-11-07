@@ -6,9 +6,6 @@ import { pa11y, prepareAudit as pa11y_prepareAudit } from '@cypress-audit/pa11y'
 import { defineConfig } from 'cypress'
 import htmlvalidate from 'cypress-html-validate/plugin'
 
-import * as scanConfigs from './scanConfigs.js'
-
-
 export default defineConfig({
   e2e: {
     specPattern: 'cypress/e2e/**/*.cy.ts',

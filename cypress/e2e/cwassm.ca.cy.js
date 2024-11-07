@@ -1,7 +1,7 @@
-import { shuffleArray } from "../../utils.js";
 import * as scanConfigs from "../../scanConfigs.js";
+import { shuffleArray } from "../../utils.js";
 import { urls } from "../fixtures/cwassm.ca.json";
-describe("CWASSM.ca", async () => {
+describe("CWASSM.ca", () => {
     const testURLs = shuffleArray(urls).slice(0, scanConfigs.PAGE_COUNT);
     it.each(testURLs)("Has valid HTML - %s", (testURL) => {
         cy.visit(testURL);

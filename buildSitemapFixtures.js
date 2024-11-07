@@ -10,7 +10,7 @@ if (!website) {
     process.exitCode = 1;
 }
 const sitemapConfig = sitemapConfigs[website];
-if (!sitemapConfig) {
+if (sitemapConfig === undefined) {
     console.log('No URLs to build fixture file.');
     process.exitCode = 1;
 }

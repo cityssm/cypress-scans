@@ -1,10 +1,9 @@
-import { shuffleArray } from "../../utils.js";
 import * as scanConfigs from "../../scanConfigs.js";
-
+import { shuffleArray } from "../../utils.js";
 import { urls } from "../fixtures/gflgardens.ca.json";
 
 
-describe("GFLGardens.ca", async () => {
+describe("GFLGardens.ca", () => {
 
   const testURLs = shuffleArray(urls).slice(0, scanConfigs.PAGE_COUNT);
 
